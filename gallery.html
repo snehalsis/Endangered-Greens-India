@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Endangered Greens India</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://images.unsplash.com/photo-1660316004618-c9a52b29f240?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3') no-repeat center/cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+        header { background: rgba(0, 0, 0, 0.6); width: 100%; padding: 10px; text-align: center; font-size: 24px; }
+        .button-container { position: absolute; top: 20px; right: 20px; }
+        .button { padding: 10px 20px; margin: 5px; border: none; background: #4CAF50; color: white; cursor: pointer; }
+        .gallery-container { display: flex; align-items: center; flex-grow: 1; gap: 20px; }
+        .arrow { font-size: 36px; color: white; cursor: pointer; }
+        .gallery-item img { width: 300px; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <header>Gallery</header>
+    <div class="button-container">
+        <button class="button" onclick="location.href='home.html'">Home</button>
+        <button class="button" onclick="location.href='our-cause.html'">Our Cause</button>
+        <button class="button" onclick="location.href='gallery.html'">Gallery</button>
+        <button class="button" onclick="location.href='solutions.html'">Solutions</button>
+        <button class="button" onclick="location.href='contact-us.html'">Contact Us</button>
+    </div>
+    <div class="gallery-container">
+        <div class="arrow" onclick="changeSlide(-1)">&#9664;</div>
+        <div class="gallery-item">
+            <img id="gallery-image" src="" alt="Plant Image">
+            <div id="plant-name" style="font-weight: bold; margin-top: 10px;"></div>
+            <div id="plant-description" style="margin-top: 5px;"></div>
+        </div>
+        <div class="arrow" onclick="changeSlide(1)">&#9654;</div>
+    </div>
+    <script>
+        const plants = [
+            { name: "Malabar Mahogany", image: "https://mahoganivishwaagro.com/wp-content/uploads/2023/04/mahogani-plantation-768x1024.jpg", description: "Majestic tree with significant cultural and economic value." },
+            { name: "Musli", image: "https://www.jiomart.com/images/product/original/rvhqrkc1xz/plantzoin-edible-chlorophytum-safed-musli-chlorophytum-tuberosum-safed-musli-live-plant-product-images-orvhqrkc1xz-p600060915-0-202304011120.jpg?im=Resize=(1000,1000)", description: "A medicinal plant prized for its nutrient-rich properties." },
+            { name: "Assam Catkin Yew", image: "https://d2seqvvyy3b8p2.cloudfront.net/dcabd1df08b094d5dd002a1250f09598.jpg", description: "Rare plant with ecological and economic importance." },
+            { name: "Ebony", image: "https://5.imimg.com/data5/SELLER/Default/2024/6/425846328/ND/IG/KP/121696861/black-wood-plant-ceylon-ebony-diospyros-ebenum.jpg", description: "Durable tree known for its high-quality timber." },
+            { name: "Bach", image: "https://m.media-amazon.com/images/I/51yQVk6LtBL._AC_UF1000,1000_QL80_.jpg", description: "A herb with significant medicinal applications." },
+            { name: "Malkangni", image: "https://images.herzindagi.info/image/2023/Jun/how-to-grow-malkangni-plant-in-pot-at-home.jpg", description: "Known as the 'Tree of Life,' it offers various health benefits." }
+        ];
+
+        let currentIndex = 0;
+
+        function changeSlide(direction) {
+            currentIndex = (currentIndex + direction + plants.length) % plants.length;
+            const { name, image, description } = plants[currentIndex];
+            document.getElementById("gallery-image").src = image;
+            document.getElementById("plant-name").textContent = name;
+            document.getElementById("plant-description").textContent = description;
+        }
+
+        changeSlide(0);
+    </script>
+</body>
+</html>
+
+

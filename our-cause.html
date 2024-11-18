@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Cause - Endangered Greens India</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://images.unsplash.com/photo-1660316004618-c9a52b29f240?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3') no-repeat center/cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        main {
+            display: flex;
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .text-content {
+            flex: 2;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            overflow-y: auto;
+        }
+        .image-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .image-container label {
+            font-size: 18px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .button-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>Our Cause</header>
+    <div class="button-container">
+        <button class="button" onclick="location.href='home.html'">Home</button>
+        <button class="button" onclick="location.href='our-cause.html'">Our Cause</button>
+        <button class="button" onclick="location.href='gallery.html'">Gallery</button>
+        <button class="button" onclick="location.href='solutions.html'">Solutions</button>
+        <button class="button" onclick="location.href='contact-us.html'">Contact Us</button>
+    </div>
+    <main>
+        <div class="text-content">
+            <p>
+                India is home to several endangered crops, each vital for ecosystems, culture, and medicine. Protecting them is essential to preserving biodiversity and the well-being of communities.
+            </p>
+            <p><strong>Red Sandalwood (Pterocarpus santalinus)</strong>: Known for its medicinal properties and industrial uses, this tree is exclusive to Andhra Pradesh and crucial for forestry research.</p>
+            <p><strong>Musli (Chlorophytum tuberosum)</strong>: A medicinal plant valued for its nutrients and skin-healing properties.</p>
+            <p><strong>Assam Catkin Yew (Taxus wallichiana)</strong>: Found only in specific regions of Arunachal Pradesh, it holds ecological and economic significance.</p>
+            <p><strong>Ebony (Diospyros ebenum)</strong>: Famous for its durable timber, it supports home goods industries and local wildlife.</p>
+            <p>
+                Addressing crop endangerment protects lives and biodiversity, ensuring a sustainable future for generations to come.
+            </p>
+        </div>
+        <div class="image-container">
+            <img src="https://blog.kamaayurveda.in/wp-content/uploads/2023/07/KAMA_June2023_Blog_InternalImage1_9-Best-Toners-For-Acne-Prone-Skin-As-Per-Experts_600X600px.jpg" alt="Red Sandalwood">
+            <label>Red Sandalwood</label>
+        </div>
+    </main>
+</body>
+</html>
+
+

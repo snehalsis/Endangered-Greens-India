@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Endangered Greens India</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://images.unsplash.com/photo-1725059615637-8a20ae4fec78?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center/cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            color: white;
+            height: 100vh;
+        }
+        h1 {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 100%;
+            margin: 0;
+        }
+        .button-container {
+            display: flex;
+            justify-content: flex-end;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #45a049;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #388e3c;
+        }
+        .description {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 80%;
+            margin-top: 30px;
+        }
+        .form-container {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 80%;
+            margin-top: 30px;
+        }
+        .form-container textarea {
+            width: 100%;
+            height: 100px;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .rate-us {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 80%;
+            margin-top: 30px;
+        }
+        .rate-button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #45a049;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .rate-button:hover {
+            background-color: #388e3c;
+        }
+        .stars i {
+            font-size: 30px;
+            color: gray;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+        .stars i.selected {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <div class="button-container">
+        <button class="button" onclick="location.href='home.html'">Home</button>
+        <button class="button" onclick="location.href='our-cause.html'">Our Cause</button>
+        <button class="button" onclick="location.href='gallery.html'">Gallery</button>
+        <button class="button" onclick="location.href='solutions.html'">Solutions</button>
+        <button class="button" onclick="location.href='contact-us.html'">Contact Us</button>
+    </div>
+    <div class="description">
+        <p>If you have any questions or suggestions, feel free to contact us. We’re always here to help and discuss ways to save endangered plants together.</p>
+    </div>
+    <div class="form-container">
+        <h2>Ask Us a Question</h2>
+        <textarea placeholder="Write your question here..."></textarea>
+        <button onclick="alert('Thank you for your question!')">Send</button>
+    </div>
+    <div class="rate-us">
+        <h2>Rate Us</h2>
+        <div class="stars">
+            <i class="star">&#9733;</i><i class="star">&#9733;</i><i class="star">&#9733;</i>
+            <i class="star">&#9733;</i><i class="star">&#9733;</i>
+        </div>
+        <button class="rate-button" onclick="alert('Thank you for your feedback!')">Submit</button>
+    </div>
+
+    <script>
+        document.querySelectorAll('.star').forEach((star, index) => {
+            star.addEventListener('click', () => {
+                document.querySelectorAll('.star').forEach((s, i) => s.classList.toggle('selected', i <= index));
+            });
+        });
+    </script>
+</body>
+</html>
+
